@@ -3,7 +3,7 @@ const nodemailer = require("nodemailer");
 async function enviarCorreoPop(req, res){
     
     let datos = req.body;
-    console.log(datos);
+
     const {nombre, apellido, telefono, correo, mensaje, tipoServicio} = datos;
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
@@ -47,8 +47,7 @@ async function enviarCorreoPop(req, res){
             </tr>
         </table>
         <p style="padding: 2px 0;">Solicitud generada desde la pagina web.</p>
-        <p style="padding: 2px 0;">Trigrama</p>
-        <a style="text-decoration: none; padding: 2px 0; display: block; color: blue; width: 100px;" href="https://trigrama.com.mx">trigrama.com.mx</a>
+        <a style="text-decoration: none; padding: 2px 0; display: block; color: blue; text-decoration: none; width: 100px;" href="https://trigrama.com.mx">Trigrama.com.mx</a>
         <p style="padding: 2px 0;">Correo: jabascal@trigrama.com.mx</p>
     `;
 

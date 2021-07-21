@@ -12,5 +12,5 @@ app.use(express.json())
 app.use(require("./routes/correo"));
 
 app.listen( process.env.PORT , () => {
-    console.log("Estas conectado " + process.env.PORT );
+    console.log("Estas conectado " + process.env.PORT + " " + process.env.FRONTEND );
 });
